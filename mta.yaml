@@ -58,7 +58,7 @@ modules:
           name: srv_api
           url: ~{url}
     properties:
-      TENANT_HOST_PATTERN: "^(.*)-dev-bookshop-app.cfapps.eu10.hana.ondemand.com"
+      TENANT_HOST_PATTERN: "^(.*)-dev-bookshop-app.cfapps.us10.hana.ondemand.com"
 
 resources:
   - name: bookshop-hdi-container

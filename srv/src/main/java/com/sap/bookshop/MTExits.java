@@ -19,7 +19,7 @@ public class MTExits {
 	@BeforeOnboarding
 	public String getAppUrl(String tenantId, SubscriptionPayload requestPayload) {
 		System.out.println("MTExits: BeforeOnboarding for tenant: " + tenantId + " subdomain: " + requestPayload.getSubscribedSubdomain());
-		return "https://" + requestPayload.getSubscribedSubdomain() + "-dev-bookshop-app.cfapps.eu10.hana.ondemand.com";
+		return "https://" + requestPayload.getSubscribedSubdomain() + "-dev-bookshop-app.cfapps.us10.hana.ondemand.com";
 	}
 	*/
 
@@ -27,7 +27,7 @@ public class MTExits {
 	public BeforeOnboardingResponse beforeOnboarding (String tenantId, SubscriptionPayload requestPayload) throws MalformedURLException {
 		System.out.println("MTExits: BeforeOnboardingResponse for tenant: " + tenantId + " subdomain: " + requestPayload.getSubscribedSubdomain());
 		BeforeOnboardingResponse response = BeforeOnboardingResponse.getInstance();
-		response.setUrl(new URL("https://" + requestPayload.getSubscribedSubdomain() + "-dev-bookshop-app.cfapps.eu10.hana.ondemand.com"));
+		response.setUrl(new URL("https://" + requestPayload.getSubscribedSubdomain() + "-dev-bookshop-app.cfapps.us10.hana.ondemand.com"));
 		response.setManagedOnboarding(true); 
 		return response;
 	}

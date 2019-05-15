@@ -1,0 +1,17 @@
+_schema-version: '3.1'
+ID: bookshop-mtaex
+extends: bookshop
+
+modules:
+  - name: bookshop-db
+    parameters:
+      host: prov-multi-dev-bookshop-db
+     
+  - name: bookshop-srv
+    parameters:
+      host: prov-multi-dev-bookshop-srv
+     
+  - name: bookshop-app
+    parameters:
+      host: prov-multi-dev-bookshop-app
+     
